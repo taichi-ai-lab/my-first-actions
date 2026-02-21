@@ -1,0 +1,19 @@
+name: Hello World
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Hello Worldを表示
+        run: echo "Hello, GitHub Actions!"
+
+      - name: 日付を表示
+        run: date
